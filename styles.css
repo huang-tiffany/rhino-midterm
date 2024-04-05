@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Linotype Univers Bold";
-  src: url("Linotype Univers Bold.ttf") format("truetype");
+  src: url("/Linotype Univers Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Linotype Univers Regular";
-  src: url("Linotype Univers Regular.ttf") format("truetype");
+  src: url("/Linotype Univers Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Linotype Univers Light";
-  src: url("Linotype Univers Light.ttf") format("truetype");
+  src: url("/Linotype Univers Light.ttf") format("truetype");
 }
 
 * {
