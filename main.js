@@ -469,7 +469,7 @@ const sec11 = document.querySelector("#section-11 .section-content");
 // initial view
 animationScripts.push({
   start: 0,
-  end: 3,
+  end: 0,
   func: () => {
     camera.position.set(-0.075, 0, 3);
     camera.lookAt(laX, laY, laZ);
@@ -479,61 +479,61 @@ animationScripts.push({
 
 // fan
 animationScripts.push({
-  start: 3,
-  end: 10,
+  start: 0,
+  end: 8,
   func: () => {
     // 0.3, 0.825, 0.1;
     // camera.position.set(0.385, 0.85, 0.35);
     // camera.lookAt(0.385, 0.85, 0.35);
-    laX = lerp(-0.075, 0.385, scalePercent(3, 10));
-    laY = lerp(0, 0.85, scalePercent(3, 10));
-    laZ = lerp(0, 0.35, scalePercent(3, 10));
+    laX = lerp(-0.075, 0.385, scalePercent(0, 8));
+    laY = lerp(0, 0.85, scalePercent(0, 8));
+    laZ = lerp(0, 0.35, scalePercent(0, 8));
 
-    camera.position.x = lerp(-0.075, 0.385, scalePercent(3, 10));
-    camera.position.y = lerp(0, 0.85, scalePercent(3, 10));
-    camera.position.z = lerp(3, 0.35, scalePercent(3, 10));
+    camera.position.x = lerp(-0.075, 0.385, scalePercent(0, 8));
+    camera.position.y = lerp(0, 0.85, scalePercent(0, 8));
+    camera.position.z = lerp(3, 0.35, scalePercent(0, 8));
 
     camera.lookAt(laX, laY, laZ);
 
-    sec0.style.opacity = lerp(1, 0, scalePercent(3, 5));
-    sec1.style.opacity = lerp(0, 1, scalePercent(9.5, 10));
+    sec0.style.opacity = lerp(1, 0, scalePercent(0, 2));
+    sec1.style.opacity = lerp(0, 1, scalePercent(7.5, 8));
+  },
+});
+
+// juicer
+animationScripts.push({
+  start: 10,
+  end: 12,
+  func: () => {
+    // -0.6, 0.865, 0.1
+    // camera.lookAt(-0.5, 0.865, 0.1);
+    // camera.position.set(-0.65, 0.9, 0.45);
+
+    camera.position.z = lerp(0.35, 0.5, scalePercent(10, 12));
+
+    camera.lookAt(laX, laY, laZ);
+
+    sec0.style.opacity = 0;
+    sec1.style.opacity = lerp(1, 0, scalePercent(10, 12));
   },
 });
 
 // juicer
 animationScripts.push({
   start: 12,
-  end: 14,
-  func: () => {
-    // -0.6, 0.865, 0.1
-    // camera.lookAt(-0.5, 0.865, 0.1);
-    // camera.position.set(-0.65, 0.9, 0.45);
-
-    camera.position.z = lerp(0.35, 0.5, scalePercent(12, 14));
-
-    camera.lookAt(laX, laY, laZ);
-
-    sec0.style.opacity = 0;
-    sec1.style.opacity = lerp(1, 0, scalePercent(12, 14));
-  },
-});
-
-// juicer
-animationScripts.push({
-  start: 14,
   end: 19,
   func: () => {
     // -0.6, 0.865, 0.1
     // camera.lookAt(-0.5, 0.865, 0.1);
     // camera.position.set(-0.65, 0.9, 0.45);
 
-    laX = lerp(0.385, -0.5, scalePercent(14, 19));
-    laY = lerp(0.85, 0.865, scalePercent(14, 19));
-    laZ = lerp(0.35, 0.1, scalePercent(14, 19));
+    laX = lerp(0.385, -0.5, scalePercent(12, 19));
+    laY = lerp(0.85, 0.865, scalePercent(12, 19));
+    laZ = lerp(0.35, 0.1, scalePercent(12, 19));
 
-    camera.position.x = lerp(0.385, -0.65, scalePercent(14, 19));
-    camera.position.y = lerp(0.85, 0.9, scalePercent(14, 19));
-    camera.position.z = lerp(0.5, 0.45, scalePercent(14, 19));
+    camera.position.x = lerp(0.385, -0.65, scalePercent(12, 19));
+    camera.position.y = lerp(0.85, 0.9, scalePercent(12, 19));
+    camera.position.z = lerp(0.5, 0.45, scalePercent(12, 19));
 
     camera.lookAt(laX, laY, laZ);
 
